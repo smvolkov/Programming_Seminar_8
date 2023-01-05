@@ -75,3 +75,28 @@ void ShowMatrix(int[,] newMatrix)
 
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
+void MinRow(int[,] lowMatr)
+{
+    int lowestRow = 0;
+    int lowestRowNumber = 1;
+    for(int i = 0; i < lowMatr.GetLength(0); i++)
+    {
+        int currentRow = 0;
+        for(int j = 0; j < lowMatr.GetLength(1); j++)
+        {
+            currentRow += lowMatr[i, j];
+        }
+
+        if (i == 0) lowestRow = currentRow;
+        if (currentRow < lowestRow)
+        {
+            lowestRowNumber = i + 1;
+            lowestRow = currentRow;
+        }
+
+    }
+
+    Console.WriteLine($"{lowestRowNumber} строка");
+}
+
+MinRow(IntMatrix(4, 4));
