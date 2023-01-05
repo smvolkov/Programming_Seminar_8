@@ -46,17 +46,32 @@ void SortMatrix(int[,] matr)
     ShowMatrix(matr);
 }
 
-void ShowMatrix(int[,] sortedMatrix)
+void ShowMatrix(int[,] newMatrix)
 {
-    for (int row = 0; row < sortedMatrix.GetLength(0); row++)
+    for (int row = 0; row < newMatrix.GetLength(0); row++)
     {
-        for (int col = 0; col < sortedMatrix.GetLength(1); col++)
+        for (int col = 0; col < newMatrix.GetLength(1); col++)
         {
-            Console.Write($"{sortedMatrix[row, col]} ");
+            Console.Write($"{newMatrix[row, col]} ");
         }
         Console.WriteLine();
     }
     Console.WriteLine();
 }
 
-SortMatrix(IntMatrix(3, 4));
+//SortMatrix(IntMatrix(3, 4));
+
+// Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+
+// Например, задан массив:
+
+// 1 4 7 2
+
+// 5 9 2 3
+
+// 8 4 2 4
+
+// 5 2 6 7
+
+// Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
+
