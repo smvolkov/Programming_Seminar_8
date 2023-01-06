@@ -128,4 +128,63 @@ void MatrixProduct(int[,] matrixA, int[,] matrixB)
     ShowMatrix(productedMatrix);
 }
 
-MatrixProduct(IntMatrix(3, 2), IntMatrix(2, 3));
+//MatrixProduct(IntMatrix(3, 2), IntMatrix(2, 3));
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
+// которая будет построчно выводить массив, добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
+
+void Array3d(int m, int n, int o)
+{
+    int[,,] arr = new int[m, n, o];
+
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = 0; k < arr.GetLength(2); k++)
+            {
+                //arr[i, j, k] = new Random().Next((i+j+k+1)*10, (i+j+k+1)*20);
+                int temp = new Random().Next(10, 100);
+                int flag = 0;
+                for (int f = 0; f < arr.GetLength(0); f++)
+                {
+                    for (int g = 0; g < arr.GetLength(1); g++)
+                    {
+                        for (int h = 0; h < arr.GetLength(2); h++)
+                        {
+                            if (arr[f, g, h] == temp)
+                            {
+                                flag = 1;
+                                break;
+                            }
+
+                        }
+
+                        if (flag == 1) break;
+                    }
+
+                    if (flag == 1)
+                    {
+                        temp = new Random().Next(10, 100);
+                        f = -1;
+                        flag = 0;
+                    }
+                }
+
+                arr[i, j, k] = temp;
+                Console.Write($"{arr[i, j, k]}({i},{j},{k}) ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+
+    
+}
+
+Array3d(2, 2, 2);
