@@ -59,7 +59,7 @@ void ShowMatrix(int[,] newMatrix)
     Console.WriteLine();
 }
 
-//SortMatrix(IntMatrix(3, 4));
+SortMatrix(IntMatrix(3, 4));
 
 // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 
@@ -99,7 +99,7 @@ void MinRow(int[,] lowMatr)
     Console.WriteLine($"{lowestRowNumber} строка");
 }
 
-//MinRow(IntMatrix(4, 4));
+MinRow(IntMatrix(4, 4));
 
 // Задача 58: Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
 // Например, даны 2 матрицы:
@@ -128,7 +128,7 @@ void MatrixProduct(int[,] matrixA, int[,] matrixB)
     ShowMatrix(productedMatrix);
 }
 
-//MatrixProduct(IntMatrix(3, 2), IntMatrix(2, 3));
+MatrixProduct(IntMatrix(3, 2), IntMatrix(2, 3));
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, 
 // которая будет построчно выводить массив, добавляя индексы каждого элемента.
@@ -187,7 +187,7 @@ void Array3d(int m, int n, int o)
     
 }
 
-//Array3d(2, 2, 2);
+Array3d(2, 2, 2);
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 // Например, на выходе получается вот такой массив:
